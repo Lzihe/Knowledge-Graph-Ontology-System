@@ -1,0 +1,1548 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial#"
+     xml:base="http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:Pizza="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#"
+     xmlns:pizza="http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza">
+        <rdfs:comment>A tutorial ontology for the Pizza domain.</rdfs:comment>
+        <rdfs:comment xml:lang="gmail.com also, see my blog for other information and resources relevant to owl, swrl, and other knowledge graph technology: https://www.michaeldebellis.com/blog">Developed by Michael DeBellis. Please direct all comments and questions. to mdebellissf</rdfs:comment>
+        <rdfs:comment>The PizzaTutorial is licensed under the GNU Affero General Public License v3.0
+Permissions of this strongest copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#complements -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#complements">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasBase">
+        <owl:inverseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isBaseOf"/>
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSimilarTaste -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSimilarTaste">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSweetness -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSweetness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Sweetness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping">
+        <owl:inverseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isToppingOf"/>
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isBaseOf"/>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isMilderThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isMilderThan">
+        <owl:inverseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isSpicierThan"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isSpicierThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isSpicierThan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isToppingOf"/>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#pairsWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#pairsWith">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#pizzaSpiciness -->
+
+    <owl:ObjectProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#pizzaSpiciness">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasAllergenInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasAllergenInfo">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasCaloricContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasCaloricContent">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasDiameter">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasFatContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasFatContent">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSugarContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSugarContent">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Sweetness"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasVolume">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isCarbonated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isCarbonated">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isGlutenFree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isGlutenFree">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#numberOfToppings -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#numberOfToppings">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#scovilleHeat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#scovilleHeat">
+        <rdfs:domain rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheesyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella, Tomato, Jalapeno, and Pepperoni toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella, Tomato and Pepperoni toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AppleJuice"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DietCocaCola"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RegularCocaCola"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheesyPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheesyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicPizza">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetarianPizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness"/>
+                                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetarianPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RichChocolate"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#StrawberrySorbet"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#InterestingPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#InterestingPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasCaloricContent"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella and Tomato toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetarianPizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#isMilderThan"/>
+                                        <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetarianPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasCaloricContent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase"/>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SeafoodTopping"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SeafoodTopping -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SeafoodTopping">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#pairsWith"/>
+                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that  has Mozzarella, Olives, Parmesan, and Tomato toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasSpiciness"/>
+                                <owl:hasValue rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Sweetness -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Sweetness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FreeSugar"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FullSugar"/>
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HalfSugar"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#hasTopping"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping"/>
+                                    <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#InterestingPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyPizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HamTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ham, Mozzarella, Pepperoni, Tomato, JalapenoPepper</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">767</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#InterestingPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyPizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ThinAndCrispyBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyBeefTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beef, Mozzarella, Pepperoni, Tomato, JalapenoPepper</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">675</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza1">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pepperoni, Tomato</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">723</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza2">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ThinAndCrispyBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pepperoni, Tomato</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">543</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AppleJuice -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AppleJuice">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+        <Pizza:hasSweetness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HalfSugar"/>
+        <Pizza:hasVolume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</Pizza:hasVolume>
+        <Pizza:isCarbonated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Pizza:isCarbonated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream"/>
+        <Pizza:hasFatContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Pizza:hasFatContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza1"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza1"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza1"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza1"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza1"/>
+        <Pizza:isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Pizza:isGlutenFree>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DietCocaCola -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DietCocaCola">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+        <Pizza:hasSweetness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FreeSugar"/>
+        <Pizza:hasVolume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Pizza:hasVolume>
+        <Pizza:isCarbonated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Pizza:isCarbonated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FreeSugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FreeSugar">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Sweetness"/>
+        <Pizza:hasSugarContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Pizza:hasSugarContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FullSugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FullSugar">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Sweetness"/>
+        <Pizza:hasSugarContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Pizza:hasSugarContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+        <Pizza:hasSimilarTaste rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HalfSugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HalfSugar">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Sweetness"/>
+        <Pizza:hasSugarContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Pizza:hasSugarContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HamTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HamTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <Pizza:hasSimilarTaste rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SalamiTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+        <Pizza:isSpicierThan rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:isSpicierThan rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:scovilleHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</Pizza:scovilleHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza1">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheesyPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mozzarella, RedPepper</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">345</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza1">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheesyPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#InterestingPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ParmesanTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TunaTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parmesan, Tomato, Tuna</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">263</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza2">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ThinAndCrispyBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PrawnTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prawn, Tomato</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">376</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+        <Pizza:isMilderThan rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:isSpicierThan rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:scovilleHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Pizza:scovilleHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza1">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GreenPepeper, Mushroom</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">332</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Spiciness"/>
+        <Pizza:isMilderThan rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:isMilderThan rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:scovilleHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Pizza:scovilleHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MediumVeggiePizza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ParmesanTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ParmesanTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PrawnTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PrawnTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SeafoodTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+        <Pizza:hasSimilarTaste rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HotVeggiePizza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RegularCocaCola -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RegularCocaCola">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+        <Pizza:complements rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+        <Pizza:complements rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+        <Pizza:hasSweetness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FullSugar"/>
+        <Pizza:hasVolume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Pizza:hasVolume>
+        <Pizza:isCarbonated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Pizza:isCarbonated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RichChocolate -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RichChocolate">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream"/>
+        <Pizza:hasFatContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</Pizza:hasFatContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SalamiTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SalamiTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <Pizza:hasSimilarTaste rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HamTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza1">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:pairsWith rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato, Olive</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">342</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza2">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#LowCaloriePizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza"/>
+        <Pizza:hasBase rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ThinAndCrispyBase"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+        <Pizza:hasTopping rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        <Pizza:pairsWith rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla"/>
+        <Pizza:pizzaSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:hasAllergenInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato, Olive</Pizza:hasAllergenInfo>
+        <Pizza:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">322</Pizza:hasCaloricContent>
+        <Pizza:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Pizza:hasDiameter>
+        <Pizza:numberOfToppings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Pizza:numberOfToppings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyBeefTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyBeefTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#StrawberrySorbet -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#StrawberrySorbet">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream"/>
+        <Pizza:hasFatContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Pizza:hasFatContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ThinAndCrispyBase -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ThinAndCrispyBase">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza2"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza2"/>
+        <Pizza:isBaseOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza2"/>
+        <Pizza:isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Pizza:isGlutenFree>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza2"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza2"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza1"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TunaTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TunaTopping">
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        <rdf:type rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SeafoodTopping"/>
+        <Pizza:hasSpiciness rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        <Pizza:isToppingOf rdf:resource="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Beverage"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#IceCream"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Pizza"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaBase"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PizzaTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#CheeseTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MeatTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SeafoodTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#VegetableTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza1"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaHotPizza2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza1"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AmericanaPizza2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AppleJuice"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DietCocaCola"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#AppleJuice"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RegularCocaCola"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RichChocolate"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ClassicVanilla"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#StrawberrySorbet"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DeepPanBase"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ThinAndCrispyBase"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#DietCocaCola"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RegularCocaCola"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FreeSugar"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FullSugar"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FreeSugar"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HalfSugar"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#FullSugar"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HalfSugar"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#HamTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Hot"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza1"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MargheritaPizza2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Medium"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#Mild"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#ParmesanTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SalamiTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MozzarellaTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyBeefTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#MushroomTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#OliveTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SalamiTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PepperoniTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyBeefTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#PrawnTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TunaTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#RedPepperTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#TomatoTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SalamiTopping"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SpicyBeefTopping"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza1"/>
+            <rdf:Description rdf:about="http://www.ucl.ac.uk/23079792/INST0069/OntologyDevelopment/Pizza#SohoPizza2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
